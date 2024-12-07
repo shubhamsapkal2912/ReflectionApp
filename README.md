@@ -38,8 +38,6 @@ Copy code
 .
 ├── app.js                # Main server file
 ├── package.json          # Project configuration and dependencies
-├── views/                # EJS templates (if using EJS)
-│   └── feedback.ejs      # Feedback form template
 └── public/               # Public assets (optional: CSS, JS files)
 Endpoints
 1. Dynamic Feedback Form

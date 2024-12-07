@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+
+  <h1>Submit Feedback</h1>
+</header>
+<main>
+  
+  <form action="/submit-feedback/<%= linkCode %>" method="POST">
+    <label for="participantName">Your Name:</label>
+    <input type="text" id="participantName" name="participantName" required>
+    <br>
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" name="feedback" required></textarea>
+    <br>
+    <button type="submit">Submit Feedback</button>
+  </form>
+</main>
+</body>
+</html>

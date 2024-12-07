@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      margin: 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    .table th, .table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    .button {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Hello <%= username %></h1>
+      <div>
+        <a href="/view-feedback" class="button">View Previous Feedback</a>
+        <a href="/create-feedback-form" class="button">Create New Feedback</a>
+      </div>
+    </div>
+    <table class="table">
+      <tr>
+        <th>Feedback Name</th>
+        <th>Link</th>
+        <th>Open</th>
+      </tr>
+      <% feedbackForms.forEach(form => { %>
+      <tr>
+        <td><%= form.title %></td>
+        <td><a href="/feedback/<%= form.link_code %>" class="button">Link</a></td>
+        <td><a href="/feedback/<%= form.link_code %>" class="button">Open</a></td>
+      </tr>
+      <% }); %>
+    </table>
+  </div>
+</body>
+</html>
